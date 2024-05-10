@@ -1,5 +1,5 @@
 <template>
-  <micro-app name="vue2-sub" :url="url" />
+  <micro-app name="vue2" :url="url" />
 </template>
 
 <script lang="ts">
