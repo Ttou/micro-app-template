@@ -1,0 +1,20 @@
+{
+  "name": "app-rs-vue2",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rsbuild dev",
+    "build": "cross-env NODE_ENV=production rsbuild build",
+    "stage": "cross-env NODE_ENV=staging rsbuild build",
+    "serve": "http-server dist -p 3005 -s --cors"
+  },
+  "dependencies": {
+    "element-ui": "^2.15.14",
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.6.13",
+    "@rsbuild/plugin-vue2": "^0.6.13",
+    "sass": "~1.32.13",
+    "sass-loader": "^13.3.3"
+  }
+}

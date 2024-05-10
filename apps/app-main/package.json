@@ -1,0 +1,22 @@
+{
+  "name": "app-main",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "stage": "vue-cli-service build --mode staging",
+    "serve": "http-server dist -p 3000 -P http://localhost:3000? -s"
+  },
+  "dependencies": {
+    "@micro-zoe/micro-app": "^1.0.0-rc.5",
+    "core-js": "^3.36.1",
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "sass": "~1.32.13",
+    "sass-loader": "^13.3.3"
+  }
+}

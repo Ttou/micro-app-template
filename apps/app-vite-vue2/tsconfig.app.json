@@ -1,0 +1,27 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "noUnusedLocals": false,
+
+    /* Custom */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "@ttou/element2-typings/package",
+      "@ttou/element2-typings/vue",
+      "@ttou/element2-typings/refs",
+      "@ttou/wujie-typings/global",
+      "node",
+      "vite/client"
+    ]
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules"],
+  "vueCompilerOptions": {
+    "target": 2.7
+  }
+}

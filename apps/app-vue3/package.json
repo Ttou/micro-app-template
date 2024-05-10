@@ -1,0 +1,20 @@
+{
+  "name": "app-vue3",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "stage": "vue-cli-service build --mode staging",
+    "serve": "http-server dist -p 3002 -s --cors"
+  },
+  "dependencies": {
+    "core-js": "^3.36.1",
+    "element-plus": "^2.7.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "^5.0.8"
+  }
+}
