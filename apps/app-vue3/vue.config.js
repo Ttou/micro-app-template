@@ -38,6 +38,14 @@ module.exports = defineConfig({
       args[0].title = '无界微前端（Vue3）'
       return args
     })
+
+    // 禁用报警
+    config.plugin('define').tap(args => {
+      Object.assign(args[0], {
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false'
+      })
+      return args
+    })
   },
   devServer: {
     headers: {
