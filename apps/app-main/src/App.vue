@@ -63,7 +63,7 @@
           </router-link>
           <router-link
             to="/vue3/#/location"
-            @click.native="handleJump('vue3', '/vue3/#/dialog')"
+            @click.native="handleJump('vue3', '/vue3/#/location')"
           >
             路由
           </router-link>
