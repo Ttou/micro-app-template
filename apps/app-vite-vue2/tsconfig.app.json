@@ -14,7 +14,6 @@
       "@ttou/element2-typings/package",
       "@ttou/element2-typings/vue",
       "@ttou/element2-typings/refs",
-      "@ttou/wujie-typings/global",
       "node",
       "vite/client"
     ]

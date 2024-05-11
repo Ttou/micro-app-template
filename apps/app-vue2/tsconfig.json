@@ -27,7 +27,6 @@
     "types": [
       "@ttou/element2-typings/package",
       "@ttou/element2-typings/vue",
-      "@ttou/wujie-typings/global",
       "node"
     ]
   },

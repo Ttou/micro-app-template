@@ -25,7 +25,6 @@
       "@/*": ["src/*"]
     },
     "types": [
-      "@ttou/wujie-typings/global",
       "element-plus/global",
       "node"
     ]
