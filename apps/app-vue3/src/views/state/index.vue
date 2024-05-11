@@ -25,7 +25,8 @@ export default defineComponent({
     })
 
     function handleJump(e: MouseEvent) {
-      window?.$wujie.props?.jump('vue2')
+      const baseRouter = window.microApp.router.getBaseAppRouter()
+      baseRouter.push({ name: 'vue2', path: '/contact' })
     }
 
     return {

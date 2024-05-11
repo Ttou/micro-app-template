@@ -5,7 +5,7 @@ export function useMicroApp(Vue: VueConstructor, router: any) {
   Vue.config.ignoredElements = ['micro-app']
 
   microApp.start({
-    'router-mode': 'search',
+    'router-mode': 'native',
     lifeCycles: {
       created(e, appName) {
         console.log(`子应用${appName}被创建`)
@@ -39,5 +39,33 @@ export function useMicroApp(Vue: VueConstructor, router: any) {
 
   if (window.localStorage.getItem('preload') !== 'false') {
     // 预加载
+    microApp.preFetch([
+      {
+        name: 'vue2',
+        url: process.env.VUE_APP_VUE2_ENTRY
+      },
+      {
+        name: 'vue3',
+        url: process.env.VUE_APP_VUE3_ENTRY
+      },
+      {
+        name: 'vite-vue2',
+        url: process.env.VUE_APP_VITE_VUE2_ENTRY,
+        iframe: true
+      },
+      {
+        name: 'vite-vue3',
+        url: process.env.VUE_APP_VITE_VUE3_ENTRY,
+        iframe: true
+      },
+      {
+        name: 'rs-vue2',
+        url: process.env.VUE_APP_RS_VUE2_ENTRY
+      },
+      {
+        name: 'rs-vue3',
+        url: process.env.VUE_APP_RS_VUE3_ENTRY
+      }
+    ])
   }
 }

@@ -31,16 +31,16 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   setup() {
     function handleJump() {
-      const baseRouter = window.microApp.router.getBaseAppRouter()
-      baseRouter.push({ name: 'vue3' })
+      const baseRouter = window.microApp?.router.getBaseAppRouter()
+      baseRouter.push({ name: 'vue3', path: '/vue3/#/contact' })
     }
 
     function handleAlert() {
-      window?.parent.alert('主应用alert')
+      window.rawWindow?.alert('主应用alert')
     }
 
     function handleEmit() {
-      window.microApp.setGlobalData({
+      window.microApp?.forceSetGlobalData({
         type: 'click',
         payload: 'vue2'
       })

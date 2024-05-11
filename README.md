@@ -52,7 +52,10 @@ pnpm demo
 
 - 装上 volar 插件后更好的支持模板开发
 - vite 子应用使用了按需加载，开发时需要使用 `optimizeDeps` 预构建
+- 主应用无法使用 `router-link` 跳转，请使用 `microApp.router` 手动跳转
 
 ## 待解决
 
-- 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知
+- [ ] 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知
+- [ ] 子应用内部跳转时，左侧菜单激活状态不会更新
+- [ ] 子应用无法跳转到另一个子应用指定页面

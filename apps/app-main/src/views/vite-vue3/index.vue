@@ -1,5 +1,5 @@
 <template>
-  <micro-app name="vite-vue3" :url="url" iframe />
+  <micro-app name="vite-vue3" :url="url" iframe keep-alive />
 </template>
 
 <script lang="ts">

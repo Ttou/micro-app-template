@@ -1,5 +1,5 @@
 <template>
-  <micro-app name="vue3" :url="url" />
+  <micro-app name="vue3" :url="url" keep-alive />
 </template>
 
 <script lang="ts">

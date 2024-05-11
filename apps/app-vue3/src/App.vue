@@ -6,8 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { defineComponent } from 'vue'
 
 import { Nav, Provider } from './components'
 
@@ -16,23 +15,6 @@ export default defineComponent({
   components: {
     Nav,
     Provider
-  },
-  setup() {
-    const route = useRoute()
-    const router = useRouter()
-
-    watch(
-      () => route.path,
-      () => {
-        window.$wujie?.bus.$emit('sub-route-change', 'vue3', route.path)
-      }
-    )
-
-    onMounted(() => {
-      window.$wujie?.bus.$on('vue3-router-change', (path: any) => {
-        router.push(path)
-      })
-    })
   }
 })
 </script>

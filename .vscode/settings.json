@@ -5,6 +5,7 @@
     "preinstall",
     "rsbuild",
     "stylelint",
-    "unplugin"
+    "unplugin",
+    "vite"
   ]
 }

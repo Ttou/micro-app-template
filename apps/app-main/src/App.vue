@@ -2,23 +2,43 @@
   <div id="app">
     <div id="nav" :class="{ active }" @click="handleClose">
       <router-link to="/home">主应用</router-link>
-      <router-link to="/vue2">
+      <a class="main-menu">
         Vue2
         <img
           :class="['main-icon', { active: vue2Flag }]"
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('vue2')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="vue2Flag" class="sub-menu">
-          <router-link to="/vue2-sub/home">首页</router-link>
-          <router-link to="/vue2-sub/dialog">弹窗</router-link>
-          <router-link to="/vue2-sub/location">路由</router-link>
-          <router-link to="/vue2-sub/contact">通信</router-link>
+          <router-link
+            to="/vue2/#/home"
+            @click.native="handleJump('vue2', '/vue2/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/vue2/#/dialog"
+            @click.native="handleJump('vue2', '/vue2/#/dialog')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/vue2/#/location"
+            @click.native="handleJump('vue2', '/vue2/#/location')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/vue2/#/contact"
+            @click.native="handleJump('vue2', '/vue2/#/contact')"
+          >
+            通信
+          </router-link>
         </div>
       </transition>
-      <router-link to="/vue3">
+      <a class="main-menu">
         Vue3
         <span class="alive">保活</span>
         <img
@@ -26,33 +46,78 @@
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('vue3')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="vue3Flag" class="sub-menu">
-          <router-link to="/vue3-sub/home">首页</router-link>
-          <router-link to="/vue3-sub/dialog">弹窗</router-link>
-          <router-link to="/vue3-sub/location">路由</router-link>
-          <router-link to="/vue3-sub/contact">通信</router-link>
-          <router-link to="/vue3-sub/state">状态</router-link>
+          <router-link
+            to="/vue3/#/home"
+            @click.native="handleJump('vue3', '/vue3/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/vue3/#/dialog"
+            @click.native="handleJump('vue3', '/vue3/#/dialog')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/vue3/#/location"
+            @click.native="handleJump('vue3', '/vue3/#/dialog')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/vue3/#/contact"
+            @click.native="handleJump('vue3', '/vue3/#/contact')"
+          >
+            通信
+          </router-link>
+          <router-link
+            to="/vue3/#/state"
+            @click.native="handleJump('vue3', '/vue3/#/state')"
+          >
+            状态
+          </router-link>
         </div>
       </transition>
-      <router-link to="/vite-vue2">
+      <a class="main-menu">
         ViteVue2
         <img
           :class="['main-icon', { active: viteVue2Flag }]"
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('viteVue2')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="viteVue2Flag" class="sub-menu">
-          <router-link to="/vite-vue2-sub/home">首页</router-link>
-          <router-link to="/vite-vue2-sub/dialog">弹窗</router-link>
-          <router-link to="/vite-vue2-sub/location">路由</router-link>
-          <router-link to="/vite-vue2-sub/contact">通信</router-link>
+          <router-link
+            to="/vite-vue2/#/home"
+            @click.native="handleJump('vite-vue2', '/vite-vue2/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/vite-vue2/#/dialog"
+            @click.native="handleJump('vite-vue2', '/vite-vue2/#/dialog')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/vite-vue2/#/location"
+            @click.native="handleJump('vite-vue2', '/vite-vue2/#/location')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/vite-vue2/#/contact"
+            @click.native="handleJump('vite-vue2', '/vite-vue2/#/contact')"
+          >
+            通信
+          </router-link>
         </div>
       </transition>
-      <router-link to="/vite-vue3">
+      <a class="main-menu">
         ViteVue3
         <span class="alive">保活</span>
         <img
@@ -60,33 +125,78 @@
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('viteVue3')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="viteVue3Flag" class="sub-menu">
-          <router-link to="/vite-vue3-sub/home">首页</router-link>
-          <router-link to="/vite-vue3-sub/dialog">弹窗</router-link>
-          <router-link to="/vite-vue3-sub/location">路由</router-link>
-          <router-link to="/vite-vue3-sub/contact">通信</router-link>
-          <router-link to="/vite-vue3-sub/state">状态</router-link>
+          <router-link
+            to="/vite-vue3/#/home"
+            @click.native="handleJump('vite-vue3', '/vite-vue3/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/vite-vue3/#/dialog"
+            @click.native="handleJump('vite-vue3', '/vite-vue3/#/home')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/vite-vue3/#/location"
+            @click.native="handleJump('vite-vue3', '/vite-vue3/#/location')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/vite-vue3/#/contact"
+            @click.native="handleJump('vite-vue3', '/vite-vue3/#/contact')"
+          >
+            通信
+          </router-link>
+          <router-link
+            to="/vite-vue3/#/state"
+            @click.native="handleJump('vite-vue3', '/vite-vue3/#/state')"
+          >
+            状态
+          </router-link>
         </div>
       </transition>
-      <router-link to="/rs-vue2">
+      <a class="main-menu">
         RsVue2
         <img
           :class="['main-icon', { active: rsVue2Flag }]"
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('rsVue2')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="rsVue2Flag" class="sub-menu">
-          <router-link to="/rs-vue2-sub/home">首页</router-link>
-          <router-link to="/rs-vue2-sub/dialog">弹窗</router-link>
-          <router-link to="/rs-vue2-sub/location">路由</router-link>
-          <router-link to="/rs-vue2-sub/contact">通信</router-link>
+          <router-link
+            to="/rs-vue2/#/home"
+            @click.native="handleJump('rs-vue2', '/rs-vue2/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/rs-vue2/#/dialog"
+            @click.native="handleJump('rs-vue2', '/rs-vue2/#/dialog')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/rs-vue2/#/location"
+            @click.native="handleJump('rs-vue2', '/rs-vue2/#/location')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/rs-vue2/#/contact"
+            @click.native="handleJump('rs-vue2', '/rs-vue2/#/contact')"
+          >
+            通信
+          </router-link>
         </div>
       </transition>
-      <router-link to="/rs-vue3">
+      <a class="main-menu">
         RsVue3
         <span class="alive">保活</span>
         <img
@@ -94,24 +204,50 @@
           src="@/assets/images/up-one.png"
           @click.prevent="handleFlag('rsVue3')"
         />
-      </router-link>
+      </a>
       <transition name="fade">
         <div v-show="rsVue3Flag" class="sub-menu">
-          <router-link to="/rs-vue3-sub/home">首页</router-link>
-          <router-link to="/rs-vue3-sub/dialog">弹窗</router-link>
-          <router-link to="/rs-vue3-sub/location">路由</router-link>
-          <router-link to="/rs-vue3-sub/contact">通信</router-link>
-          <router-link to="/rs-vue3-sub/state">状态</router-link>
+          <router-link
+            to="/rs-vue3/#/home"
+            @click.native="handleJump('rs-vue3', '/rs-vue3/#/home')"
+          >
+            首页
+          </router-link>
+          <router-link
+            to="/rs-vue3/#/dialog"
+            @click.native="handleJump('rs-vue3', '/rs-vue3/#/dialog')"
+          >
+            弹窗
+          </router-link>
+          <router-link
+            to="/rs-vue3/#/location"
+            @click.native="handleJump('rs-vue3', '/rs-vue3/#/location')"
+          >
+            路由
+          </router-link>
+          <router-link
+            to="/rs-vue3/#/contact"
+            @click.native="handleJump('rs-vue3', '/rs-vue3/#/contact')"
+          >
+            通信
+          </router-link>
+          <router-link
+            to="/rs-vue3/#/state"
+            @click.native="handleJump('rs-vue3', '/rs-vue3/#/state')"
+          >
+            状态
+          </router-link>
         </div>
       </transition>
     </div>
     <div class="content">
-      <router-view :key="$route.path" />
+      <router-view :key="$route.name" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import microApp from '@micro-zoe/micro-app'
 import { defineComponent, reactive, toRefs, watch } from 'vue'
 import { useRoute } from 'vue-router/composables'
 
@@ -141,26 +277,34 @@ export default defineComponent({
       state[name + 'Flag'] = !state[name + 'Flag']
     }
 
+    async function handleJump(name: string, path: string) {
+      try {
+        await microApp.router.push({ name, path })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     watch(
       () => route.name,
       val => {
         switch (val) {
-          case 'vue2-sub':
+          case 'vue2':
             !state.vue2Flag && (state.vue2Flag = true)
             break
-          case 'vue3-sub':
+          case 'vue3':
             !state.vue3Flag && (state.vue3Flag = true)
             break
-          case 'vite-vue2-sub':
+          case 'vite-vue2':
             !state.viteVue2Flag && (state.viteVue2Flag = true)
             break
-          case 'vite-vue3-sub':
+          case 'vite-vue3':
             !state.viteVue3Flag && (state.viteVue3Flag = true)
             break
-          case 'rs-vue2-sub':
+          case 'rs-vue2':
             !state.rsVue2Flag && (state.rsVue2Flag = true)
             break
-          case 'rs-vue3-sub':
+          case 'rs-vue3':
             !state.rsVue3Flag && (state.rsVue3Flag = true)
             break
           default:
@@ -169,10 +313,18 @@ export default defineComponent({
       }
     )
 
+    watch(
+      () => route.fullPath,
+      val => {
+        console.log(val)
+      }
+    )
+
     return {
       ...toRefs(state),
       handleClose,
-      handleFlag
+      handleFlag,
+      handleJump
     }
   }
 })
@@ -213,6 +365,7 @@ export default defineComponent({
   width: 44px;
   padding: 0 10px;
   transition: transform 0.3s ease-in;
+  cursor: pointer;
 }
 
 .main-icon.active {
@@ -274,7 +427,7 @@ h3 {
   transition: all 0.2s linear;
 }
 
-#nav a:hover {
+#nav .sub-menu a:hover {
   color: rgb(241 107 95);
 }
 
