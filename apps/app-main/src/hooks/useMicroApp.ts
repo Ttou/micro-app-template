@@ -1,7 +1,10 @@
 import microApp from '@micro-zoe/micro-app'
 import type { VueConstructor } from 'vue'
+import type VueRouter from 'vue-router'
 
-export function useMicroApp(Vue: VueConstructor, router: any) {
+import { useJumpApp } from './useJumpApp'
+
+export function useMicroApp(Vue: VueConstructor, router: VueRouter) {
   Vue.config.ignoredElements = ['micro-app']
 
   microApp.start({
@@ -27,12 +30,10 @@ export function useMicroApp(Vue: VueConstructor, router: any) {
   microApp.router.setBaseAppRouter(router)
 
   microApp.addGlobalDataListener(data => {
-    switch (data.type) {
-      case 'click':
-        window.alert(data.payload)
-        break
-      default:
-        break
+    if (data.type === 'click') {
+      window.alert(data.payload)
+    } else if (data.type === 'route-change') {
+      useJumpApp(data.payload, router)
     }
   })
 

@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router/composables'
+import { defineComponent, onBeforeMount, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router/composables'
 
 import { Nav } from './components'
 
@@ -17,20 +17,20 @@ export default defineComponent({
     Nav
   },
   setup() {
-    const route = useRoute()
     const router = useRouter()
 
-    watch(
-      () => route.path,
-      () => {
-        window.$wujie?.bus.$emit('sub-route-change', 'rs-vue2', route.path)
+    function handleDataChange(data: Record<string, any>) {
+      if (data.type === 'route-change') {
+        router.push(data.payload)
       }
-    )
+    }
 
-    onMounted(() => {
-      window.$wujie?.bus.$on('rs-vue2-router-change', (path: any) => {
-        router.push(path)
-      })
+    onBeforeMount(() => {
+      window.microApp?.addDataListener(handleDataChange, true)
+    })
+
+    onBeforeUnmount(() => {
+      window.microApp?.removeDataListener(handleDataChange)
     })
   }
 })

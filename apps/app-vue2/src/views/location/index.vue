@@ -19,7 +19,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   setup() {
     const host = location.host
-    const windowHost = window.rawWindow.location.host
+    const windowHost = window.rawWindow?.location.host || 'microApp 不存在'
 
     return {
       host,

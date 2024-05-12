@@ -1,25 +1,13 @@
 <template>
   <div class="view">
     <div class="content">
-      <p>应用可以有三种方式进行通信：</p>
-      <h3>1、主应用通过 props 属性注入的方法</h3>
-      <p>
-        主应用通过 props 注入 jump（跳转页面）方法，子应用通过
-        $wujie.props.jump(xxx) 来使用
-      </p>
+      <h3>1、通过 setGlobalData 触发全局数据变化监听</h3>
       <div class="btnWrap">
-        <el-button @click="handleJump"> 点击跳转rs-vue3 </el-button>
+        <el-button @click="handleJump"> 点击跳转 vue3 </el-button>
       </div>
-      <h3>2、通过 window.parent 方法拿到主应用的全局方法</h3>
-      <p>子应用调用 window.parent.alert 来调用主应用的 alert方法</p>
+      <h3>2、通过 forceSetGlobalData 强制触发全局数据变化监听</h3>
       <div class="btnWrap">
-        <el-button @click="handleAlert"> 显示alert </el-button>
-      </div>
-      <h3>3、通过 bus 方法发送去中心化的事件</h3>
-      <p>主应用监听子应用的 click 事件</p>
-      <p>子应用点击按钮 $wujie.bus.$emit('click', 'rs-vue2') 发送 click 事件</p>
-      <div class="btnWrap">
-        <el-button @click="handleEmit"> 点击emit </el-button>
+        <el-button @click="handleEmit"> 强制触发 </el-button>
       </div>
     </div>
   </div>
@@ -31,20 +19,24 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   setup() {
     function handleJump() {
-      window?.$wujie.props?.jump('rs-vue3')
-    }
-
-    function handleAlert() {
-      window?.parent.alert('主应用alert')
+      window.microApp?.setGlobalData({
+        type: 'route-change',
+        payload: {
+          name: 'rs-vue3',
+          path: '/#/contact'
+        }
+      })
     }
 
     function handleEmit() {
-      window?.$wujie.bus.$emit('click', 'rs-vue2')
+      window.microApp?.forceSetGlobalData({
+        type: 'click',
+        payload: 'rs-vue2'
+      })
     }
 
     return {
       handleJump,
-      handleAlert,
       handleEmit
     }
   }

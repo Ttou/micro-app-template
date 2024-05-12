@@ -9,7 +9,7 @@
         <el-button @click="count++">+</el-button>
       </div>
       <div>
-        <el-button @click="handleJump">跳转vue2</el-button>
+        <el-button @click="handleJump">跳转 vue2</el-button>
       </div>
     </div>
   </div>
