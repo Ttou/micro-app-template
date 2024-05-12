@@ -53,6 +53,7 @@ pnpm demo
 - 装上 volar 插件后更好的支持模板开发
 - vite 子应用使用了按需加载，开发时需要使用 `optimizeDeps` 预构建
 - 主应用无法使用 `router-link` 跳转，请使用 `microApp.router` 手动跳转
+- 以 `node_modules/` 代替 `~`，否则 rsbuild 编译样式文件时会报过期警告
 
 ## 待解决
 

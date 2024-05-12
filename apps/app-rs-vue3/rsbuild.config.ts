@@ -16,7 +16,7 @@ export default defineConfig({
   },
 
   html: {
-    title: '无界微前端（Rs Vue3）',
+    title: '京东微前端（Rs Vue3）',
     mountId: 'app'
   },
   plugins: [pluginVue()],
