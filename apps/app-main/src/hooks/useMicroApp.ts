@@ -5,7 +5,6 @@ export function useMicroApp(Vue: VueConstructor, router: any) {
   Vue.config.ignoredElements = ['micro-app']
 
   microApp.start({
-    'router-mode': 'native',
     lifeCycles: {
       created(e, appName) {
         console.log(`子应用${appName}被创建`)
