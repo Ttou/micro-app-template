@@ -30,10 +30,15 @@ export function useMicroApp(Vue: VueConstructor, router: VueRouter) {
   microApp.router.setBaseAppRouter(router)
 
   microApp.addGlobalDataListener(data => {
-    if (data.type === 'click') {
-      window.alert(data.payload)
-    } else if (data.type === 'route-change') {
-      useJumpApp(data.payload, router)
+    switch (data.type) {
+      case 'click':
+        window.alert(data.payload)
+        break
+      case 'route-change':
+        useJumpApp(data.payload, router)
+        break
+      default:
+        break
     }
   })
 

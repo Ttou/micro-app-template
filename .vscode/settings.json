@@ -2,6 +2,7 @@
   "vue.server.hybridMode": false,
   "cSpell.words": [
     "commitlint",
+    "composables",
     "preinstall",
     "rsbuild",
     "stylelint",
