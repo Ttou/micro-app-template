@@ -1,13 +1,13 @@
 <template>
   <div class="view">
     <div class="content">
-      <h3>1、使用 location.host 获取子应用的值</h3>
+      <h3>1、使用 window.microApp.location.host 获取子应用的值</h3>
       <blockquote>
-        <div>{{ host }}</div>
+        <div>{{ mainHost }}</div>
       </blockquote>
-      <h3>2、使用 window.microApp.location.host 获取主应用的值</h3>
+      <h3>2、使用 location.host 获取主应用的值</h3>
       <blockquote>
-        <div>{{ windowHost }}</div>
+        <div>{{ childHost }}</div>
       </blockquote>
     </div>
   </div>
@@ -18,12 +18,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
-    const host = location.host
-    const windowHost = window.microApp?.location.host || 'microApp 不存在'
+    const mainHost = window.microApp?.location.host || 'microApp 不存在'
+    const childHost = location.host
 
     return {
-      host,
-      windowHost
+      mainHost,
+      childHost
     }
   }
 })
