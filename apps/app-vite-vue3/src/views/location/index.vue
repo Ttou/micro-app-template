@@ -3,11 +3,11 @@
     <div class="content">
       <h3>1、使用 window.microApp.location.host 获取子应用的值</h3>
       <blockquote>
-        <div>{{ mainHost }}</div>
+        <div>{{ childHost }}</div>
       </blockquote>
       <h3>2、使用 location.host 获取主应用的值</h3>
       <blockquote>
-        <div>{{ childHost }}</div>
+        <div>{{ mainHost }}</div>
       </blockquote>
     </div>
   </div>
@@ -18,12 +18,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
-    const mainHost = window.microApp?.location.host || 'microApp 不存在'
-    const childHost = location.host
+    const childHost = window.microApp?.location.host || 'microApp 不存在'
+    const mainHost = location.host
 
     return {
-      mainHost,
-      childHost
+      childHost,
+      mainHost
     }
   }
 })
