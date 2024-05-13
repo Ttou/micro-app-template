@@ -33,19 +33,25 @@ pnpm i
 - 运行
 
 ```bash
-pnpm dev
+# 选择 dev
+pnpm scripts
 ```
 
 - 打包
 
 ```bash
-pnpm build
+# 选择 prod
+pnpm scripts
 ```
 
 - 示例
 
 ```bash
-pnpm demo
+# 选择 stage
+pnpm scripts
+
+# 选择 serve
+pnpm scripts
 ```
 
 ## 注意事项
