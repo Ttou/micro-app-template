@@ -1,13 +1,13 @@
 <template>
   <div class="view">
     <div class="content">
-      <h3>1、使用 location.host 获取子应用的值</h3>
+      <h3>1、获取子应用的 location.host 值</h3>
       <blockquote>
-        <div>{{ childHost }}</div>
+        <div>{{ selfHost }}</div>
       </blockquote>
-      <h3>2、使用 window.rawWindow.location.host 获取主应用的值</h3>
+      <h3>2、获取主应用的 location.host 值</h3>
       <blockquote>
-        <div>{{ mainHost }}</div>
+        <div>{{ parentHost }}</div>
       </blockquote>
     </div>
   </div>
@@ -16,14 +16,19 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { useLocation } from '@/hooks'
+
 export default defineComponent({
   setup() {
-    const childHost = location.host
-    const mainHost = window.rawWindow?.location.host || 'microApp 不存在'
+    const { selfLocation, parentLocation } = useLocation()
+
+    const selfHost = selfLocation.host
+    const parentHost =
+      typeof parentLocation === 'string' ? parentLocation : parentLocation.host
 
     return {
-      childHost,
-      mainHost
+      selfHost,
+      parentHost
     }
   }
 })
