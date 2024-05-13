@@ -11,11 +11,7 @@ export function useJumpApp({ name, path }: Options, router: VueRouter) {
 
   if (!microApp.getActiveApps({ excludeHiddenApp: true }).includes(name)) {
     console.log('子应用未激活，需先渲染')
-    router.push({ name })
-    microApp.setData(name, {
-      type: 'route-change',
-      payload: { path: path.replace('/#', '') }
-    })
+    router.push({ path: `/${name}?${name}=${encodeURIComponent(path)}` })
   } else {
     console.log('子应用已激活，直接跳转路由')
     microApp.router.push({ name, path })
