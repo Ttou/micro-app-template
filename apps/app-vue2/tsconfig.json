@@ -25,6 +25,7 @@
     "types": [
       "@ttou/element2-typings/package",
       "@ttou/element2-typings/vue",
+      "@ttou/micro-app-typings/global",
       "node"
     ]
   },

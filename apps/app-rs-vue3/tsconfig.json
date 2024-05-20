@@ -23,6 +23,7 @@
       "@/*": ["src/*"]
     },
     "types": [
+      "@ttou/micro-app-typings/global",
       "element-plus/global",
       "node"
     ]

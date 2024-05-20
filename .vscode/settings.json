@@ -1,4 +1,5 @@
 {
+  "vue.server.hybridMode": "typeScriptPluginOnly",
   "cSpell.words": [
     "commitlint",
     "composables",
