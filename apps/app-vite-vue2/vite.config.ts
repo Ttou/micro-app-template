@@ -63,10 +63,9 @@ export default defineConfig(({ mode }) => {
           chunkFileNames: 'js/[name]-[hash].js',
           entryFileNames: 'js/[name]-[hash].js',
           assetFileNames: '[ext]/[name]-[hash].[ext]',
-          manualChunks(id) {
-            if (/[\\/]node_modules[\\/]/.test(id)) {
-              return 'chunk-libs'
-            }
+          manualChunks: {
+            vue: ['vue', 'vue-router'],
+            'element-ui': ['element-ui']
           }
         }
       }
