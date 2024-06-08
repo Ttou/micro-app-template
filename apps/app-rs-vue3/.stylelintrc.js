@@ -6,10 +6,6 @@ module.exports = {
   plugins: ['stylelint-prettier'],
   overrides: [
     {
-      files: ['**/*.scss'],
-      customSyntax: 'postcss-scss'
-    },
-    {
       files: ['**/*.vue'],
       customSyntax: 'postcss-html'
     }

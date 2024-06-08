@@ -1,8 +1,9 @@
 import { defineConfig, loadEnv } from '@rsbuild/core'
+import { pluginSass } from '@rsbuild/plugin-sass'
 import { pluginVue2 } from '@rsbuild/plugin-vue2'
 import autoprefixer from 'autoprefixer'
 
-const { publicVars } = loadEnv({ prefixes: ['VUE_APP_'] })
+const { publicVars, parsed } = loadEnv({ prefixes: ['VUE_APP_'] })
 
 export default defineConfig({
   source: {
@@ -17,11 +18,16 @@ export default defineConfig({
     title: '京东微前端（Rs Vue2）',
     mountId: 'app'
   },
-  plugins: [pluginVue2()],
+  plugins: [
+    pluginSass({
+      sassLoaderOptions: {
+        api: 'legacy',
+        implementation: require('sass')
+      }
+    }),
+    pluginVue2()
+  ],
   tools: {
-    sass: {
-      implementation: require('sass')
-    },
     postcss: {
       postcssOptions: {
         plugins: [autoprefixer()]
@@ -51,6 +57,6 @@ export default defineConfig({
       'Access-Control-Allow-Origin': '*'
     },
     host: 'localhost',
-    port: 3005
+    port: Number(parsed.VUE_APP_PORT)
   }
 })

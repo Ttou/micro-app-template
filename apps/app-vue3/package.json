@@ -4,11 +4,11 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
-    "serve": "http-server dist -p 3002 -s --cors"
+    "serve": "node serve.mjs"
   },
   "dependencies": {
     "core-js": "^3.36.1",
-    "element-plus": "^2.7.2",
+    "element-plus": "^2.7.5",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },

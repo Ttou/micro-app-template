@@ -3,7 +3,7 @@ import { pluginVue } from '@rsbuild/plugin-vue'
 import autoprefixer from 'autoprefixer'
 import postcssNested from 'postcss-nested'
 
-const { publicVars } = loadEnv({ prefixes: ['VUE_APP_'] })
+const { publicVars, parsed } = loadEnv({ prefixes: ['VUE_APP_'] })
 
 export default defineConfig({
   source: {
@@ -50,6 +50,6 @@ export default defineConfig({
       'Access-Control-Allow-Origin': '*'
     },
     host: 'localhost',
-    port: 3006
+    port: Number(parsed.VUE_APP_PORT)
   }
 })

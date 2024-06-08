@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
     server: {
       cors: true,
       host: 'localhost',
-      port: 3004
+      port: Number(env.VITE_APP_PORT)
     },
     plugins: [
       vue(),

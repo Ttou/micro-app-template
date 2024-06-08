@@ -5,15 +5,15 @@
     "dev": "vite",
     "build": "vite build",
     "stage": "vite build --mode staging",
-    "serve": "http-server dist -p 3004 -s --cors"
+    "serve": "node serve"
   },
   "dependencies": {
-    "element-plus": "^2.7.2",
+    "element-plus": "^2.7.5",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.2.11"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.2.13"
   }
 }

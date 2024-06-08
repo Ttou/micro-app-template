@@ -64,3 +64,4 @@ pnpm scripts
 ## 待解决
 
 - [ ] 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知
+- [ ] `app-rs-vue2` 编译失败

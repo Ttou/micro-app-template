@@ -4,7 +4,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
-    "serve": "http-server dist -p 3000 -P http://localhost:3000? -s"
+    "serve": "node serve.mjs"
   },
   "dependencies": {
     "@micro-zoe/micro-app": "^1.0.0-rc.5",

@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "stage": "vite build --mode staging",
-    "serve": "http-server dist -p 3003 -s --cors"
+    "serve": "node serve"
   },
   "dependencies": {
     "element-ui": "^2.15.14",
@@ -15,6 +15,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.3.1",
     "sass": "~1.32.13",
-    "vite": "^5.2.11"
+    "vite": "^5.2.13"
   }
 }

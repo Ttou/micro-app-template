@@ -4,15 +4,15 @@
     "dev": "cross-env NODE_ENV=development rsbuild dev",
     "build": "cross-env NODE_ENV=production rsbuild build",
     "stage": "cross-env NODE_ENV=staging rsbuild build",
-    "serve": "http-server dist -p 3006 -s --cors"
+    "serve": "node serve.mjs"
   },
   "dependencies": {
-    "element-plus": "^2.7.2",
+    "element-plus": "^2.7.5",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@rsbuild/core": "^0.6.13",
-    "@rsbuild/plugin-vue": "^0.6.13"
+    "@rsbuild/core": "^0.7.3",
+    "@rsbuild/plugin-vue": "^0.7.3"
   }
 }
