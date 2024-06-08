@@ -16,16 +16,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { useJumpApp } from '@/hooks'
+
 export default defineComponent({
   setup() {
     function handleJump() {
-      window.microApp?.setGlobalData({
-        type: 'route-change',
-        payload: {
-          name: 'vite-vue3',
-          path: '/#/contact'
-        }
-      })
+      useJumpApp({ type: 'event', name: 'vite-vue3', path: '/#/contact' })
     }
 
     function handleEmit() {

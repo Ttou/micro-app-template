@@ -18,6 +18,8 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 
+import { useJumpApp } from '@/hooks'
+
 export default defineComponent({
   setup() {
     const state = reactive({
@@ -25,8 +27,7 @@ export default defineComponent({
     })
 
     function handleJump(e: MouseEvent) {
-      const baseRouter = window.microApp.router.getBaseAppRouter()
-      baseRouter.push({ name: 'vue2', path: '/contact' })
+      useJumpApp({ type: 'router', name: 'vue2', path: '/#/contact' })
     }
 
     return {

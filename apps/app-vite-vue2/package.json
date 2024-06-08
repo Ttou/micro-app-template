@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "stage": "vite build --mode staging",
-    "serve": "node serve"
+    "serve": "node --no-warnings serve.js"
   },
   "dependencies": {
     "element-ui": "^2.15.14",

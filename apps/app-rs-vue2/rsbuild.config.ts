@@ -12,6 +12,10 @@ export default defineConfig({
     },
     define: {
       ...publicVars
+    },
+    alias: {
+      // 重定向，以防报错
+      'core-js/library/fn': 'core-js/features'
     }
   },
   html: {

@@ -18,14 +18,17 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 
+import { useJumpApp } from '@/hooks'
+
 export default defineComponent({
+  name: 'State',
   setup() {
     const state = reactive({
       count: 10
     })
 
     function handleJump(e: MouseEvent) {
-      window?.$wujie.props?.jump('rs-vue2')
+      useJumpApp({ type: 'router', name: 'rs-vue2', path: '/#/contact' })
     }
 
     return {

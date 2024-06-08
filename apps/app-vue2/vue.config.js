@@ -2,6 +2,9 @@ const { defineConfig } = require('@vue/cli-service')
 const { default: components } = require('unplugin-vue-components/webpack')
 const { ElementUiResolver } = require('unplugin-vue-components/resolvers')
 const autoprefixer = require('autoprefixer')
+const { config } = require('dotenv')
+
+const { parsed } = config({ path: '.env.development' })
 
 module.exports = defineConfig({
   publicPath: './',
@@ -56,7 +59,7 @@ module.exports = defineConfig({
       'Access-Control-Allow-Origin': '*'
     },
     host: 'localhost',
-    port: '3001'
+    port: parsed.VUE_APP_PORT
   },
   transpileDependencies: ['sockjs-client']
 })

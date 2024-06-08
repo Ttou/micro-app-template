@@ -14,7 +14,6 @@ export default defineConfig({
       ...publicVars
     }
   },
-
   html: {
     title: '京东微前端（Rs Vue3）',
     mountId: 'app'

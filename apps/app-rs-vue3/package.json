@@ -4,7 +4,7 @@
     "dev": "cross-env NODE_ENV=development rsbuild dev",
     "build": "cross-env NODE_ENV=production rsbuild build",
     "stage": "cross-env NODE_ENV=staging rsbuild build",
-    "serve": "node serve.mjs"
+    "serve": "node --no-warnings serve.mjs"
   },
   "dependencies": {
     "element-plus": "^2.7.5",

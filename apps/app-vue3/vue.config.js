@@ -3,6 +3,9 @@ const { default: components } = require('unplugin-vue-components/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const autoprefixer = require('autoprefixer')
 const postcssNested = require('postcss-nested')
+const { config } = require('dotenv')
+
+const { parsed } = config({ path: '.env.development' })
 
 module.exports = defineConfig({
   publicPath: './',
@@ -52,6 +55,6 @@ module.exports = defineConfig({
       'Access-Control-Allow-Origin': '*'
     },
     host: 'localhost',
-    port: '3002'
+    port: parsed.VUE_APP_PORT
   }
 })

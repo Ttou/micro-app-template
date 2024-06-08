@@ -4,7 +4,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
-    "serve": "node serve.mjs"
+    "serve": "node --no-warnings serve.mjs"
   },
   "dependencies": {
     "core-js": "^3.36.1",

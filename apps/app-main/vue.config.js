@@ -1,4 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
+const { config } = require('dotenv')
+
+const { parsed } = config({ path: '.env.development' })
 
 module.exports = defineConfig({
   publicPath:
@@ -28,7 +31,7 @@ module.exports = defineConfig({
       'Access-Control-Allow-Origin': '*'
     },
     host: 'localhost',
-    port: '3000',
+    port: parsed.VUE_APP_PORT,
     open: true
   },
   transpileDependencies: ['sockjs-client']
