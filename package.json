@@ -18,7 +18,7 @@
     "@commitlint/types": "^19.0.3",
     "@tsconfig/node18": "^18.2.4",
     "@ttou/element2-typings": "^2.2.6",
-    "@ttou/micro-app-typings": "^0.0.3",
+    "@ttou/micro-app-typings": "^0.0.5",
     "@ttou/vite-html": "^0.0.6",
     "@types/http-server": "^0.12.4",
     "@types/node": "^18.19.33",
