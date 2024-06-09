@@ -1,5 +1,6 @@
 import { customHtml } from '@ttou/vite-html'
 import vue from '@vitejs/plugin-vue2'
+import vueJsx from '@vitejs/plugin-vue2-jsx'
 import autoprefixer from 'autoprefixer'
 import { globbySync } from 'globby'
 import { resolve } from 'path'
@@ -39,6 +40,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
+      vueJsx(),
       components({
         dts: false,
         dirs: [],

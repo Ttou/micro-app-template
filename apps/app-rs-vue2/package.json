@@ -13,8 +13,10 @@
   },
   "devDependencies": {
     "@rsbuild/core": "^0.7.3",
+    "@rsbuild/plugin-babel": "^0.7.3",
     "@rsbuild/plugin-sass": "^0.7.3",
     "@rsbuild/plugin-vue2": "^0.7.3",
+    "@rsbuild/plugin-vue2-jsx": "^0.7.3",
     "sass": "~1.32.13",
     "sass-loader": "^13.3.3"
   }

@@ -1,1 +1,1 @@
-export { default as AppendBody } from './AppendBody.vue'
+export { default as AppendBody } from './AppendBody'

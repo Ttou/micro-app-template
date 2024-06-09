@@ -1,11 +1,4 @@
-<template>
-  <div>
-    <el-button @click="handleAdd">点击插入body</el-button>
-    <el-button @click="handleRemove">点击删除body</el-button>
-  </div>
-</template>
-
-<script lang="ts">
+import { ElButton } from 'element-plus'
 import { defineComponent, reactive } from 'vue'
 
 export default defineComponent({
@@ -34,6 +27,13 @@ export default defineComponent({
       handleAdd,
       handleRemove
     }
+  },
+  render() {
+    return (
+      <div>
+        <ElButton onClick={this.handleAdd}>点击插入body</ElButton>
+        <ElButton onClick={this.handleRemove}>点击删除body</ElButton>
+      </div>
+    )
   }
 })
-</script>

@@ -1,5 +1,6 @@
 import { customHtml } from '@ttou/vite-html'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import autoprefixer from 'autoprefixer'
 import { resolve } from 'path'
 import postcssNested from 'postcss-nested'
@@ -32,6 +33,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
+      vueJsx(),
       components({
         dts: false,
         dirs: [],

@@ -10,7 +10,6 @@
     "types": ["node"]
   },
   "include": [
-    "vite-optimize-element.ts",
     "vite.config.ts"
   ]
 }

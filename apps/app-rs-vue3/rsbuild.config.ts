@@ -1,5 +1,7 @@
 import { defineConfig, loadEnv } from '@rsbuild/core'
+import { pluginBabel } from '@rsbuild/plugin-babel'
 import { pluginVue } from '@rsbuild/plugin-vue'
+import { pluginVueJsx } from '@rsbuild/plugin-vue-jsx'
 import autoprefixer from 'autoprefixer'
 import postcssNested from 'postcss-nested'
 
@@ -18,7 +20,14 @@ export default defineConfig({
     title: '京东微前端（Rs Vue3）',
     mountId: 'app'
   },
-  plugins: [pluginVue()],
+  plugins: [
+    pluginBabel({
+      include: /\.(?:jsx|tsx)$/,
+      exclude: /[\\/]node_modules[\\/]/
+    }),
+    pluginVue(),
+    pluginVueJsx()
+  ],
   tools: {
     postcss: {
       postcssOptions: {

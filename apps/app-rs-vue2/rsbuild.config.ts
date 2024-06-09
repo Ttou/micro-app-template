@@ -1,6 +1,8 @@
 import { defineConfig, loadEnv } from '@rsbuild/core'
+import { pluginBabel } from '@rsbuild/plugin-babel'
 import { pluginSass } from '@rsbuild/plugin-sass'
 import { pluginVue2 } from '@rsbuild/plugin-vue2'
+import { pluginVue2Jsx } from '@rsbuild/plugin-vue2-jsx'
 import autoprefixer from 'autoprefixer'
 
 const { publicVars, parsed } = loadEnv({ prefixes: ['VUE_APP_'] })
@@ -29,7 +31,12 @@ export default defineConfig({
         implementation: require('sass')
       }
     }),
-    pluginVue2()
+    pluginBabel({
+      include: /\.(?:jsx|tsx)$/,
+      exclude: /[\\/]node_modules[\\/]/
+    }),
+    pluginVue2(),
+    pluginVue2Jsx()
   ],
   tools: {
     postcss: {
