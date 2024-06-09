@@ -64,4 +64,3 @@ pnpm scripts
 ## 待解决
 
 - [ ] 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知'
-- [ ] KeepAlive 配置的子应用跳转有问题 [issue](https://github.com/micro-zoe/micro-app/issues/1149)
