@@ -2,14 +2,15 @@
   <div class="view">
     <div class="content">
       <p>设置保活模式，切换应用时，子应用的路由和state都可以得到保留</p>
-      <h3>1、改动实例的状态，切换到vue2，点击按钮再回来看看</h3>
+      <h3>1、改动实例的状态，切换到其他子应用，点击按钮再回来看看</h3>
       <div class="numberContent">
         <el-button @click="count--">-</el-button>
         <span class="number">{{ count }}</span>
         <el-button @click="count++">+</el-button>
       </div>
       <div>
-        <el-button @click="handleJump">跳转 vue2</el-button>
+        <el-button @click="handleJump('vite-vue3')">跳转 vite-vue3</el-button>
+        <el-button @click="handleJump('rs-vue3')">跳转 rs-vue3</el-button>
       </div>
     </div>
   </div>
@@ -26,8 +27,8 @@ export default defineComponent({
       count: 10
     })
 
-    function handleJump(e: MouseEvent) {
-      useJumpApp({ type: 'router', name: 'vue2', path: '/#/contact' })
+    function handleJump(name: string) {
+      useJumpApp({ type: 'router', name, path: '/#/state' })
     }
 
     return {

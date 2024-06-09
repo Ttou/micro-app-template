@@ -4,7 +4,7 @@ const { ElementUiResolver } = require('unplugin-vue-components/resolvers')
 const autoprefixer = require('autoprefixer')
 const { config } = require('dotenv')
 
-const { parsed } = config({ path: '.env.development' })
+const { parsed } = config({ path: '.env' })
 
 module.exports = defineConfig({
   publicPath: './',

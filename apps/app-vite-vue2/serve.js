@@ -1,7 +1,7 @@
 import { config } from 'dotenv'
 import { createServer } from 'http-server'
 
-const { parsed } = config({ path: '.env.development' })
+const { parsed } = config({ path: '.env' })
 
 const PORT = Number(parsed.VITE_APP_PORT)
 

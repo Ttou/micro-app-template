@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer')
 const postcssNested = require('postcss-nested')
 const { config } = require('dotenv')
 
-const { parsed } = config({ path: '.env.development' })
+const { parsed } = config({ path: '.env' })
 
 module.exports = defineConfig({
   publicPath: './',

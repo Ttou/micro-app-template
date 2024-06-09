@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 const { config } = require('dotenv')
 
-const { parsed } = config({ path: '.env.development' })
+const { parsed } = config({ path: '.env' })
 
 module.exports = defineConfig({
   publicPath:
