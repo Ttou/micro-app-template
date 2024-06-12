@@ -12,10 +12,29 @@ Vue.config.productionTip = false
 useElementUI(Vue)
 useErrorHandler(Vue)
 
-const app = new Vue({ router, render: h => h(App) })
+let app: Nullable<Vue> = null
 
-app.$mount('#app')
+window.mount = () => {
+  app = new Vue({
+    router,
+    render: h => h(App)
+  })
+  // 与官方文档不同
+  if (!document.getElementById('app')) {
+    const el = document.createElement('div')
+    el.id = 'app'
+    document.body.appendChild(el)
+  }
+  app.$mount('#app')
+}
 
 window.unmount = () => {
-  app.$destroy()
+  app!.$destroy()
+  // 与官方文档不同
+  app!.$el.remove()
+  app = null
+}
+
+if (!window.__MICRO_APP_ENVIRONMENT__) {
+  window.mount()
 }
