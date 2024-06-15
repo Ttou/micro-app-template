@@ -17,7 +17,7 @@ export default defineConfig({
     }
   },
   html: {
-    title: '京东微前端（Rs Vue3）',
+    title: parsed.VUE_APP_TITLE,
     mountId: 'app'
   },
   plugins: [

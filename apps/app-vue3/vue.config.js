@@ -38,7 +38,7 @@ module.exports = defineConfig({
 
     // 配置应用标题
     config.plugin('html').tap(args => {
-      args[0].title = '京东微前端（Vue3）'
+      args[0].title = parsed.VUE_APP_TITLE
       return args
     })
 
