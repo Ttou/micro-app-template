@@ -19,7 +19,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 
-import { useJumpApp } from '@/hooks'
+import { useDataTrigger } from '@/hooks'
 
 export default defineComponent({
   setup() {
@@ -28,7 +28,13 @@ export default defineComponent({
     })
 
     function handleJump(name: string) {
-      useJumpApp({ type: 'router', name, path: '/#/state' })
+      useDataTrigger({
+        type: 'route-change',
+        payload: {
+          name,
+          path: '/#/state'
+        }
+      })
     }
 
     return {

@@ -7,15 +7,13 @@ interface Options {
 }
 
 export function useJumpApp({ name, path }: Options, router: VueRouter) {
-  console.log('跳转子应用', name, path)
-
   if (!microApp.getActiveApps({ excludeHiddenApp: true }).includes(name)) {
-    console.log('子应用未激活，需先渲染')
+    console.log('子应用未激活，需先渲染', name, path)
     router
       .push({ path: `/${name}?${name}=${encodeURIComponent(path)}` })
       .then(() => {
         if (path !== microApp.router.current.get(name)?.fullPath) {
-          console.log('子应用已渲染，但路由未匹配，需手动跳转')
+          console.log('子应用已渲染，但路由未匹配，需手动跳转', name, path)
           microApp.setData(name, {
             type: 'route-change',
             payload: { path, replace: true }
@@ -23,7 +21,7 @@ export function useJumpApp({ name, path }: Options, router: VueRouter) {
         }
       })
   } else {
-    console.log('子应用已激活，直接跳转路由')
+    console.log('子应用已激活，直接跳转路由', name, path)
     microApp.router.push({ name, path })
   }
 }

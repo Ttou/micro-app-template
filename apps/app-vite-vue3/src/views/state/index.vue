@@ -18,7 +18,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 
-import { useJumpApp } from '@/hooks'
+import { useDataTrigger } from '@/hooks'
 
 export default defineComponent({
   setup() {
@@ -27,7 +27,13 @@ export default defineComponent({
     })
 
     function handleJump(e: MouseEvent) {
-      useJumpApp({ type: 'router', name: 'vue3', path: '/#/state' })
+      useDataTrigger({
+        type: 'route-change',
+        payload: {
+          name: 'vue3',
+          path: '/#/state'
+        }
+      })
     }
 
     return {

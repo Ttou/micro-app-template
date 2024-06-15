@@ -16,18 +16,25 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import { useJumpApp } from '@/hooks'
+import { useDataTrigger } from '@/hooks'
 
 export default defineComponent({
   setup() {
     function handleJump() {
-      useJumpApp({ type: 'event', name: 'vue3', path: '/#/contact' })
+      useDataTrigger({
+        type: 'route-change',
+        payload: {
+          name: 'vue3',
+          path: '/#/contact'
+        }
+      })
     }
 
     function handleEmit() {
-      window.microApp?.forceSetGlobalData({
+      useDataTrigger({
         type: 'click',
-        payload: 'vue2'
+        payload: 'vue2',
+        force: true
       })
     }
 

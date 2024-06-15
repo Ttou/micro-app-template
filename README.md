@@ -60,8 +60,8 @@ pnpm scripts
 - vite 子应用使用了按需加载，开发时需要使用 `optimizeDeps` 预构建
 - 以 `node_modules/` 代替 `~`，否则 rsbuild 编译样式文件时会报过期警告
 - `microApp.router.push` 只在目标应用激活时可用
+- 不要在主应用使用 `setBaseAppRouter` 下发路由对象来让子应用控制路由，子应用统一使用事件通信跳转路由
 
 ## 待解决
 
 - [ ] 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知'
-- [ ] 子应用相互跳转不稳定

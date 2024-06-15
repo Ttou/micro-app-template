@@ -27,8 +27,6 @@ export function useMicroApp(Vue: VueConstructor, router: VueRouter) {
     }
   })
 
-  microApp.router.setBaseAppRouter(router)
-
   microApp.addGlobalDataListener(data => {
     switch (data.type) {
       case 'click':
