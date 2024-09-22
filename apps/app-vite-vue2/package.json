@@ -13,9 +13,10 @@
     "vue-router": "^3.6.5"
   },
   "devDependencies": {
+    "@ttou/vite-html": "^0.0.6",
     "@vitejs/plugin-vue2": "^2.3.1",
     "@vitejs/plugin-vue2-jsx": "^1.1.1",
     "sass": "~1.32.13",
-    "vite": "^5.2.13"
+    "vite": "^5.4.7"
   }
 }

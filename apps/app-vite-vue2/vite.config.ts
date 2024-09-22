@@ -17,6 +17,11 @@ export default defineConfig(({ mode }) => {
   return {
     base: './',
     css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'legacy'
+        }
+      },
       postcss: {
         plugins: [autoprefixer()]
       }
