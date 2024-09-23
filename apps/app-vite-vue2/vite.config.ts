@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'legacy'
+          api: 'modern'
         }
       },
       postcss: {
