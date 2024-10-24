@@ -5,17 +5,12 @@
   "license": "MulanPSL2",
   "scripts": {
     "scripts": "pnpm -C scripts start",
-    "commit": "git add . && git cz",
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "npx simple-git-hooks"
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "lodash-unified": "^1.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@commitlint/types": "^19.5.0",
     "@ttou/element2-typings": "^2.2.6",
     "@ttou/micro-app-typings": "^0.0.5",
     "@types/http-server": "^0.12.4",
@@ -24,10 +19,8 @@
     "@typescript-eslint/parser": "^7.18.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "autoprefixer": "^10.4.20",
-    "commitizen": "^4.3.0",
     "cpy": "^11.1.0",
     "cross-env": "^7.0.3",
-    "cz-customizable": "^7.2.1",
     "del": "^7.1.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.1",
@@ -44,7 +37,6 @@
     "postcss-nested": "^6.2.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.3",
-    "simple-git-hooks": "^2.11.1",
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-prettier": "^5.0.2",

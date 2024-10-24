@@ -9,8 +9,7 @@
         <el-button @click="count++">+</el-button>
       </div>
       <div>
-        <el-button @click="handleJump('vite-vue3')">跳转 vite-vue3</el-button>
-        <el-button @click="handleJump('rs-vue3')">跳转 rs-vue3</el-button>
+        <el-button @click="handleJump">跳转 vite-vue3</el-button>
       </div>
     </div>
   </div>
@@ -27,11 +26,11 @@ export default defineComponent({
       count: 10
     })
 
-    function handleJump(name: string) {
+    function handleJump() {
       useDataTrigger({
         type: 'route-change',
         payload: {
-          name,
+          name: 'vite-vue3',
           path: '/#/state'
         }
       })

@@ -1,6 +1,7 @@
-const { defineEslintConfig } = require('@ttou/define-config')
-
-module.exports = defineEslintConfig({
+/**
+ * @type {import('eslint').Linter.Config}
+ */
+module.exports = {
   root: true,
   env: {
     node: true
@@ -32,4 +33,4 @@ module.exports = defineEslintConfig({
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-empty-interface': 'off'
   }
-})
+}

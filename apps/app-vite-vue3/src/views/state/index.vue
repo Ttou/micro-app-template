@@ -26,7 +26,7 @@ export default defineComponent({
       count: 10
     })
 
-    function handleJump(e: MouseEvent) {
+    function handleJump() {
       useDataTrigger({
         type: 'route-change',
         payload: {

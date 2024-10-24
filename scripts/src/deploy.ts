@@ -11,9 +11,7 @@ export async function deploy() {
     { name: 'app-vue2', index: false },
     { name: 'app-vue3', index: false },
     { name: 'app-vite-vue2', index: false },
-    { name: 'app-vite-vue3', index: false },
-    { name: 'app-rs-vue2', index: false },
-    { name: 'app-rs-vue3', index: false }
+    { name: 'app-vite-vue3', index: false }
   ]
 
   for (const app of apps) {

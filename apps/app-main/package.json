@@ -7,7 +7,7 @@
     "serve": "node --no-warnings serve.mjs"
   },
   "dependencies": {
-    "@micro-zoe/micro-app": "^1.0.0-rc.10",
+    "@micro-zoe/micro-app": "^1.0.0-rc.13",
     "core-js": "^3.36.1",
     "vue": "^2.7.16",
     "vue-router": "^3.6.5"

@@ -32,21 +32,6 @@
         @update="handleFlag"
       />
       <SubMenu :show="viteVue3Flag" :list="viteVue3List" />
-      <MainMenu
-        title="RsVue2"
-        name="rsVue2"
-        :active="rsVue2Flag"
-        @update="handleFlag"
-      />
-      <SubMenu :show="rsVue2Flag" :list="rsVue2List" />
-      <MainMenu
-        title="RsVue3"
-        name="rsVue3"
-        :alive="true"
-        :active="rsVue3Flag"
-        @update="handleFlag"
-      />
-      <SubMenu :show="rsVue3Flag" :list="rsVue3List" />
     </div>
     <div class="content">
       <router-view :key="$route.name" />
@@ -121,9 +106,7 @@ export default defineComponent({
       vue2List: createVue2List('vue2'),
       vue3List: createVue3List('vue3'),
       viteVue2List: createVue2List('vite-vue2'),
-      viteVue3List: createVue3List('vite-vue3'),
-      rsVue2List: createVue2List('rs-vue2'),
-      rsVue3List: createVue3List('rs-vue3')
+      viteVue3List: createVue3List('vite-vue3')
     })
 
     const route = useRoute()
@@ -148,12 +131,6 @@ export default defineComponent({
             break
           case 'vite-vue3':
             !state.viteVue3Flag && (state.viteVue3Flag = true)
-            break
-          case 'rs-vue2':
-            !state.rsVue2Flag && (state.rsVue2Flag = true)
-            break
-          case 'rs-vue3':
-            !state.rsVue3Flag && (state.rsVue3Flag = true)
             break
           default:
             break

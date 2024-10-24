@@ -60,14 +60,6 @@ export function useMicroApp(Vue: VueConstructor, router: VueRouter) {
         name: 'vite-vue3',
         url: process.env.VUE_APP_VITE_VUE3_ENTRY,
         iframe: true
-      },
-      {
-        name: 'rs-vue2',
-        url: process.env.VUE_APP_RS_VUE2_ENTRY
-      },
-      {
-        name: 'rs-vue3',
-        url: process.env.VUE_APP_RS_VUE3_ENTRY
       }
     ])
   }

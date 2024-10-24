@@ -35,16 +35,6 @@ export default new VueRouter({
       path: '/vite-vue3',
       name: 'vite-vue3',
       component: () => import('@/views/vite-vue3/index.vue')
-    },
-    {
-      path: '/rs-vue2',
-      name: 'rs-vue2',
-      component: () => import('@/views/rs-vue2/index.vue')
-    },
-    {
-      path: '/rs-vue3',
-      name: 'rs-vue3',
-      component: () => import('@/views/rs-vue3/index.vue')
     }
   ]
 })
