@@ -13,7 +13,10 @@ module.exports = defineConfig({
     loaderOptions: {
       scss: {
         // 强制使用自身的依赖
-        implementation: require('sass')
+        implementation: require('sass'),
+        sassOptions: {
+          quietDeps: true
+        }
       },
       postcss: {
         postcssOptions: {
