@@ -65,4 +65,3 @@ pnpm scripts
 ## 待解决
 
 - [ ] 使用 `pnpm -r dev` 启动时，`app-vue3` 会被忽略，原因未知'
-- [ ] `app-vite-vue2` 编译 `element-ui` 的 scss 样式时报警告

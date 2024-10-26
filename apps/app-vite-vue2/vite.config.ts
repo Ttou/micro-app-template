@@ -19,7 +19,8 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern'
+          api: 'modern',
+          quietDeps: true
         }
       },
       postcss: {
